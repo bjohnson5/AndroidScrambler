@@ -1,0 +1,68 @@
+@startuml
+
+class Fragment{
+
+}
+
+class MainActivity{
+onScrambleClick()
+onHistoryClick()
+private ScrambleFragment scramble
+private HistoryFragment history
+private MainFragment main
+}
+
+class MainFragment{
+    Button scrambleButton
+    Button historyButton
+    EditText textBox
+    mainCallback callback
+    public interface mainCallback
+    scrambleButton.setOnClickListener()
+    historyButton.setOnClickListener()
+    createNew()
+    onAttach()
+    onSaveInstanceState()
+}
+
+class ScrambleFragment{
+    private Button nextButton
+    private Button prevButton
+    private Spinner spin
+    private String lastWord
+    private String temp
+    private TextView results
+    private String word
+    private ArrayList<String> words = new ArrayList<>()
+    private int prevNum = 0
+    private int spinPos = 0
+    private int spinVal
+    private ScrollView scroll
+    spin.setOnItemSelectedListener()
+    nextButton.setOnClickListener()
+    prevButton.setOnClickListener()
+    scramble()
+    update()
+    permutate()
+    createNew()
+}
+
+class HistoryFragment{
+    private static final ArrayList<String> history = new ArrayList<>()
+    private TextView leftPane
+    private TextView rightPane
+    updateViews()
+    getHistorySize()
+    addHistory()
+    onSaveInstanceState()
+}
+
+Fragment <|-- MainFragment
+Fragment <|-- ScrambleFragment
+Fragment <|-- HistoryFragment
+
+MainFragment -> MainActivity : callback
+MainActivity -> ScrambleFragment
+MainActivity -> HistoryFragment
+
+@enduml

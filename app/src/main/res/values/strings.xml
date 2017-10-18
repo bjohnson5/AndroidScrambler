@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Brj0003SCRAMBLE</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="results">Results per page: </string>
+    <string name="scramble">SCRAMBLE</string>
+    <string name="history">HISTORY</string>
+    <string name="input">Enter a word: </string>
+    <string name="next">NEXT</string>
+    <string name="prev">PREV</string>
+    <string name="historyTitle">History</string>
+
+</resources>

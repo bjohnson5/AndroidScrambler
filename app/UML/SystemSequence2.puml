@@ -1,0 +1,6 @@
+@startuml
+
+User -> System: Click History Button
+System --> User: Displays History of words scrambled
+
+@enduml

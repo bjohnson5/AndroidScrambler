@@ -1,0 +1,11 @@
+@startuml
+
+Actor User
+
+User - (Scramble)
+User - (History)
+User - (Input)
+User - (Num Words to Display)
+
+
+@enduml

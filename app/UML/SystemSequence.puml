@@ -1,0 +1,13 @@
+@startuml
+
+User -> System: Input word
+User -> System: Click Scramble Button
+System --> User: Displays scrambled words
+
+User -> System: Click Next Button
+User <-- System: Displays next words
+
+User -> System: Click Prev Button
+User <-- System: Displays previous words
+
+@enduml
